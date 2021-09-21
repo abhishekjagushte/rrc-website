@@ -1,0 +1,9 @@
+.content-container{
+    padding: 0rem var(--content-padding)
+}
+
+@media screen and (max-width: 900px) {
+    .content-container{
+        padding: 0em 1.5rem 5em 1.5em;        
+    }
+}

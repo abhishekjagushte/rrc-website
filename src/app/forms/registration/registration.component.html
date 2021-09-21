@@ -1,0 +1,63 @@
+<div class="content-container">
+    <div class="heading-container">
+        <h1 class="content-heading">{{pageTitle}}</h1>
+    </div>
+
+
+    <!-- Registration Form -->
+    <div class="form-box">
+
+        <form [formGroup]="registrationForm">
+            <!-- <input type="hidden" name="form-name" value="contact-form" /> -->
+
+            <input id="name" type="text" formControlName="firstName" class="input col" style="margin-right: 2%"
+                placeholder="First Name" />
+
+            <input id="surname" formControlName="lastName" type="text" class="input col"
+                placeholder="Last Name" />
+
+            <input id="phoneNumber" type="text" formControlName="phoneNumber" class="input"
+                placeholder="Phone Number" />
+
+            <input id="emailId" formControlName="emailID" type="email" class="input"
+                placeholder="Email Id" />            
+                    
+            
+            <input id="college" formControlName="college" type="text" class="input"
+            placeholder="College Name" />
+
+
+            <br><br>
+            <label for="yos-inp">Year of Study</label>
+
+            <select  id="yos-inp" class="input" formControlName="yearOfStudy">
+                <option [ngValue]="-1">Year of Study</option>
+                <option *ngFor="let yos of yearOfStudy" value="{{yos.id}}">{{yos.name}}</option>
+            </select>
+        
+
+            <br><br>
+            <button id="submit" type="submit" class="button" (click)="onSubmit()">
+                Send
+            </button>
+                
+            <p *ngIf="status == success" class="content" class="content status-message" id="success-msg">
+                Thanks for you message, I will reach you out soon!
+            </p>
+            <p *ngIf="status == failure" class="content" class="content status-message" id="failure-msg">
+                There was an error
+            </p>
+            <p *ngIf="status == loading" class="content" class="content status-message" id="loading-msg">
+                Please Wait...
+            </p>
+
+            <p *ngIf="status == invalid" class="content" class="content status-message" id="failure-msg">
+                Please fill all the fields properly
+            </p>
+        </form>
+    </div>
+
+    <button class="nav-button transition-background" [routerLink]="['/']">
+        Profile
+    </button>
+</div>

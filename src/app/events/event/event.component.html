@@ -1,0 +1,17 @@
+<div class="event-container">
+
+    <img src="{{ event.imagePath }}" alt="">
+
+    <div class="event-detail-container">
+        <h2 class="subheading2">{{event.title}}</h2>
+        <h3 class="subheading3">{{event.organization}}</h3>
+        <p class="content">{{event.time}}</p>
+        <ul class="list">
+            <li class="content" *ngFor="let highlight of event.highlights">{{highlight}}</li>
+        </ul>
+        <div class="horizontal-container links-container">
+            <a *ngFor="let link of event.links" href="{{link.link}}" class="btn transition-background">{{ link.title
+                }}</a>
+        </div>
+    </div>
+</div>

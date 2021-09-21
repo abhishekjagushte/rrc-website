@@ -1,0 +1,107 @@
+<div class="content-container">
+    <div class="heading-container">
+        <h1 class="content-heading">Recruitment</h1>
+    </div>
+    <!-- Recruitment Form -->
+    <div class="form-box">
+        <p class="content">We are recruiting, grab yourself an opportunity to practically explore engineering! Join our team now! Fill out the below details to participate in our recruitment drive
+        </p>
+        <br>
+        <form [formGroup]="recruitmentForm" (ngSubmit)="onSubmit()" >
+            <!-- <input type="hidden" name="form-name" value="contact-form" /> -->
+
+            <input id="name" type="text" formControlName="firstName" class="input col" style="margin-right: 2%"
+                placeholder="First Name" />
+
+            <input id="surname" formControlName="lastName" type="text" class="input col"
+                placeholder="Last Name" />
+
+            <input id="phoneNumber" type="text" formControlName="phoneNumber" class="input"
+                placeholder="Phone Number" />
+
+            <input id="emailId" formControlName="emailID" type="email" class="input"
+                placeholder="Email Id" />            
+            
+
+            <br><br>
+            <label for="stream-inp">Stream</label>
+
+            <select id="stream-inp" class="input" formControlName="stream">
+                <option [ngValue]="-1">Select Stream</option>
+                <option *ngFor="let stream of streams" value="{{stream.id}}">{{stream.name}}</option>
+            </select> 
+            
+            
+            <br><br>
+            <label for="yos-inp">Year of Study</label>
+
+            <select  id="yos-inp" class="input" formControlName="yearOfStudy">
+                <option [ngValue]="-1">Year of Study</option>
+                <option *ngFor="let yos of yearOfStudy" value="{{yos.id}}">{{yos.name}}</option>
+            </select>
+            
+
+            <br><br>
+            <label for="fp-inp">First Preference</label>
+
+            <select  id="fp-inp" class="input" formControlName="firstPreference">
+                <option [ngValue]="-1">First Preference</option>
+                <option *ngFor="let domain of domains" value="{{domain.name}}">{{domain.name}}</option>
+            </select>            
+            
+
+            <br><br>
+            <label for="sp-inp">Second Preference</label>
+
+            <select  id="sp-inp" class="input" formControlName="secondPreference">
+                <option [ngValue]="-1">Second Preference</option>
+                <option *ngFor="let domain of domains" value="{{domain.name}}">{{domain.name}}</option>
+            </select>            
+            
+
+            <br><br>
+            <label for="tp-inp">Third Preference</label>
+
+            <select  id="tp-inp" class="input" formControlName="thirdPreference">
+                <option [ngValue]="-1">Third Preference</option>
+                <option *ngFor="let domain of domains" value="{{domain.name}}">{{domain.name}}</option>
+            </select>
+
+
+
+
+            <button id="submit" type="submit" class="button">
+                Submit
+            </button>
+                
+            <p *ngIf="status == success" class="content" class="content status-message" id="success-msg">
+                Thanks for registering, you'll be notified about your interview timings!
+            </p>
+            <p *ngIf="status == failure" class="content" class="content status-message" id="failure-msg">
+                There was an error
+            </p>
+            <p *ngIf="status == loading" class="content" class="content status-message" id="loading-msg">
+                Please Wait...
+            </p>
+
+            <p *ngIf="status == invalid" class="content" class="content status-message" id="failure-msg">
+                Please fill all the fields properly
+            </p>
+
+
+        </form>
+
+        <br><br>
+        <p class="content">To further stay updated, join our whatsapp group specific for recruitment
+            <a class="content link" href="https://chat.whatsapp.com/ILH15myABtKGv8SWEcRd8E">here</a></p>
+
+            <br><br>
+        <p class="content">Contact us:</p>
+        <p class="content">Vaishnavi Wagh: 8104772043</p>
+        <p class="content">Swagat Das: 7718861983</p>
+        
+    </div>
+
+    <button class="nav-button transition-background" [routerLink]="['/activities']">Activities</button>
+    <br><br><br><br>
+</div>

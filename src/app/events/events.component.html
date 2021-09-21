@@ -1,0 +1,9 @@
+<div class ="content-container">
+    <div class="heading-container">
+        <h1 class="content-heading">{{pageTitle}}</h1>
+    </div>
+    <app-event *ngFor="let exp of experiences" [experience]="exp"></app-event>
+    <button class="nav-button transition-background" [routerLink]="['/']">Home</button>
+    <button class="nav-button transition-background" [routerLink]="['/contact']">Contact Us</button>
+    <br><br><br><br>
+</div>
