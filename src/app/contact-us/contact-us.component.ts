@@ -1,15 +1,14 @@
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { Observable } from 'rxjs';
 import { HomePageService } from '../data/home-page.service';
 
 @Component({
-  selector: 'app-contact-me',
-  templateUrl: './contact-me.component.html',
-  styleUrls: ['./contact-me.component.css']
+  selector: 'app-contact-us',
+  templateUrl: './contact-us.component.html',
+  styleUrls: ['./contact-us.component.css']
 })
-export class ContactMeComponent implements OnInit {
+export class ContactUsComponent implements OnInit {
 
   success = "success"
   failure = "failure"

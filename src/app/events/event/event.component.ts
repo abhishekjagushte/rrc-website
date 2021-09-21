@@ -8,7 +8,7 @@ import { Event } from 'src/app/models/event.model';
 })
 export class EventComponent implements OnInit {
 
-  @Input("experience") event: Event = new Event("","","",[],[], '')
+  @Input("experience") event!: Event
 
   constructor() { }
 

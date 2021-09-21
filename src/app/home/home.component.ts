@@ -3,11 +3,11 @@ import { HomePageService } from '../data/home-page.service';
 import { SimpleSection } from '../models/SimpleSection.model';
 
 @Component({
-  selector: 'app-about',
-  templateUrl: './about.component.html',
-  styleUrls: ['./about.component.css']
+  selector: 'app-home',
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.css']
 })
-export class AboutComponent implements OnInit {
+export class HomeComponent implements OnInit {
 
   name!: string 
   surname!: string

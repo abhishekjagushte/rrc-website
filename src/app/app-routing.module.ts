@@ -1,21 +1,19 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AboutComponent } from './about/about.component';
-import { ContactMeComponent } from './contact-me/contact-me.component';
+import { HomeComponent } from './home/home.component';
+import { ContactUsComponent } from './contact-us/contact-us.component';
 import { EventsComponent } from './events/events.component';
 import { RegistrationComponent } from './forms/registration/registration.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { ProjectsComponent } from './projects/projects.component';
-import { SkillsAndAchievementsComponent } from './skills-and-achievements/skills-and-achievements.component';
 import { RecruitmentComponent } from './forms/recruitment/recruitment.component';
 import { appConfigHelper } from './AppConfigurationHelper';
 
 const routes: Routes = [
-  { path: '', component: AboutComponent },
+  { path: '', component: HomeComponent },
   // { path: 'projects', component: ProjectsComponent },
   { path: 'activities', component: EventsComponent },
-  { path: 'skills', component: SkillsAndAchievementsComponent },
-  { path: 'contact', component: ContactMeComponent }
+  { path: 'contact', component: ContactUsComponent }
 ];
 
 routes.push(appConfigHelper.getFormRoute())
