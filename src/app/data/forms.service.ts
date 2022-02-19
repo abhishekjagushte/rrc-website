@@ -7,16 +7,15 @@ import { formValidators } from '../shared/FormValidators';
 })
 export class FormsService {
   constructor() {}
-  
+
   recruitmentMacroLink: string = "https://script.google.com/macros/s/AKfycbwziX8APMiiQWSsToxhwZdOdS-J5ACntnHPk-vc3N7gkhinCpWA5gckvGR-uTpCFRfZvQ/exec"
-  
-  
+
   recruitmentInputs = {
     streams: [
       {name : 'Mechanical Engineering', id: 'MECH'},
       {name: 'EXTC Engineering', id: 'EXTC'},
       {name: 'Computer Engineering', id: 'COMPS'},
-      {name: 'Machine Learning', id: 'ML'},
+      {name: 'Artificial Intelligence & Data Science', id: 'AI'},
       {name: 'Information Technology', id: 'IT'},
       {name :'Instrumentation', id:'INST'},
     ],
@@ -29,10 +28,10 @@ export class FormsService {
     ],
 
     domains: [
-      {name: "Simulation & Analysis"}, 
-      {name: "Design & Manufacturing"}, 
-      {name: "Programming"}, 
-      {name: "Electronics"}, 
+      {name: "Simulation & Analysis"},
+      {name: "Design & Manufacturing"},
+      {name: "Programming"},
+      {name: "Electronics"},
       {name: "Marketing"},
       {name: "Web Design"}
     ]
@@ -64,4 +63,17 @@ export class FormsService {
     'yearOfStudy': new FormControl(-1, formValidators.checkIfNotSelected),
     'college': new FormControl(null, Validators.required)
   });
+
+  recruitmentWhatsAppGroupLink = 'https://chat.whatsapp.com/JYE3Wch53hV8o5EJDrJPdm'
+
+  recruitmentContacts = [
+    {
+      name: 'Niyati',
+      contact: '+91 8879416715'
+    },
+    {
+      name: 'Sahil',
+      contact: '+91 7715945653'
+    },
+  ]
 }

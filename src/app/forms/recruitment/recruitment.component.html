@@ -20,8 +20,8 @@
                 placeholder="Phone Number" />
 
             <input id="emailId" formControlName="emailID" type="email" class="input"
-                placeholder="Email Id" />            
-            
+                placeholder="Email Id" />
+
 
             <br><br>
             <label for="stream-inp">Stream</label>
@@ -29,9 +29,9 @@
             <select id="stream-inp" class="input" formControlName="stream">
                 <option [ngValue]="-1">Select Stream</option>
                 <option *ngFor="let stream of streams" value="{{stream.id}}">{{stream.name}}</option>
-            </select> 
-            
-            
+            </select>
+
+
             <br><br>
             <label for="yos-inp">Year of Study</label>
 
@@ -39,7 +39,7 @@
                 <option [ngValue]="-1">Year of Study</option>
                 <option *ngFor="let yos of yearOfStudy" value="{{yos.id}}">{{yos.name}}</option>
             </select>
-            
+
 
             <br><br>
             <label for="fp-inp">First Preference</label>
@@ -47,8 +47,8 @@
             <select  id="fp-inp" class="input" formControlName="firstPreference">
                 <option [ngValue]="-1">First Preference</option>
                 <option *ngFor="let domain of domains" value="{{domain.name}}">{{domain.name}}</option>
-            </select>            
-            
+            </select>
+
 
             <br><br>
             <label for="sp-inp">Second Preference</label>
@@ -56,8 +56,8 @@
             <select  id="sp-inp" class="input" formControlName="secondPreference">
                 <option [ngValue]="-1">Second Preference</option>
                 <option *ngFor="let domain of domains" value="{{domain.name}}">{{domain.name}}</option>
-            </select>            
-            
+            </select>
+
 
             <br><br>
             <label for="tp-inp">Third Preference</label>
@@ -73,7 +73,7 @@
             <button id="submit" type="submit" class="button">
                 Submit
             </button>
-                
+
             <p *ngIf="status == success" class="content" class="content status-message" id="success-msg">
                 Thanks for registering, you'll be notified about your interview timings!
             </p>
@@ -93,13 +93,15 @@
 
         <br><br>
         <p class="content">To further stay updated, join our whatsapp group specific for recruitment
-            <a class="content link" href="https://chat.whatsapp.com/ILH15myABtKGv8SWEcRd8E">here</a></p>
+            <a class="content link" href="{{whatsAppGroupLink}}">here</a></p>
 
-            <br><br>
+        <br>
+        <br>
+
         <p class="content">Contact us:</p>
-        <p class="content">Vaishnavi Wagh: 8104772043</p>
-        <p class="content">Swagat Das: 7718861983</p>
-        
+        <p class="content">Niyati: +91 8879416715</p>
+        <p class="content">Sahil: +91 7715945653</p>
+
     </div>
 
     <button class="nav-button transition-background" [routerLink]="['/activities']">Activities</button>

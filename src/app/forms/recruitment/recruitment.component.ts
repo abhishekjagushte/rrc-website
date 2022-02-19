@@ -19,24 +19,28 @@ export class RecruitmentComponent implements OnInit {
 
   recruitmentInputs: any;
   recruitmentForm!: FormGroup;
+  contacts: {name: string, contact: string}[] = []
   streams!: { name: string; id: string }[];
   yearOfStudy!: { name: string; id: string }[];
   domains!: { name: string }[];
+  whatsAppGroupLink!: string
 
   status: string = 'initial';
 
   ngOnInit(): void {
     this.recruitmentInputs = this.formsService.recruitmentInputs;
     this.recruitmentForm = this.formsService.recruitmentForm;
+    this.contacts = this.formsService.recruitmentContacts
+    this.whatsAppGroupLink = this.formsService.recruitmentWhatsAppGroupLink
 
     this.streams = this.recruitmentInputs.streams;
     this.yearOfStudy = this.recruitmentInputs.yearOfStudy;
     this.domains = this.recruitmentInputs.domains;
   }
 
-  onSubmit() {    
+  onSubmit() {
     if (this.recruitmentForm.valid) {
-      
+
       this.status = this.loading;
       this.http
         .post(
