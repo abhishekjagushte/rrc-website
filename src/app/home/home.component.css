@@ -106,11 +106,23 @@ height: 300px;
 }
 
 @media screen and (max-width: 1450px) {
-  /* .name {
-    font-size: 10.3rem;
-    line-height: 1.5;
-  } */
+  .name{
+    font-size: 3.5rem;
+  }
 
+  .surname{
+    font-size: 5rem;
+  }
+
+  .header{
+    gap: 5rem;
+  }
+
+}
+
+
+
+@media screen and (max-width: 1360px) {
   .verticle-divider{
     display: none;
   }
